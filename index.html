@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body> 
+  <section class="wrapper">
+
+        <div id="pomodoro-container">
+            <div id="pomodoro-header">
+                <h1 class="pomodoro-title">Pomodoro</h1>
+                <select id="session-type">
+                    <option value="20-5">1 Hour (20/5)</option>
+                    <option value="40-10">2 Hours (40/10)</option>
+                </select>
+            </div>
+            <div id="timer-display">
+                <span id="timer-minutes">25</span>:<span id="timer-seconds">00</span>
+            </div>
+            <div id="timer-controls">
+                <button id="start-button">Start</button>
+                <button id="pause-button">Pause</button>
+                <button id="skip-button">Skip Break</button>
+                <button id="stop-button">Stop</button>
+            </div>
+            <div id="volume-control">
+                <label for="volume-slider"><img id="volume-icon" src="images/volume.png" alt="Volume Icon" height="20" width="20" /></label>
+                <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+        <div id="note-controls">
+            <button id="add-note-btn">+</button>
+        </div>
+        <div id="trash-bin">
+            <img src="./images/trash.png" alt="Trash Bin" />
+        </div>
+        <div id="confirmation-popup" class="hidden">
+            <div class="popup-content">
+                <p>Are you sure you want to delete this note?</p>
+                <div class="popup-buttons">
+                    <button id="confirm-delete" class="popup-button">Yes</button>
+                    <button id="cancel-delete" class="popup-button">No</button>
+                </div>
+            </div>
+        </div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div> 
+  </section>
+  <script src="script.js"></script>
+  </body>
+</html>
